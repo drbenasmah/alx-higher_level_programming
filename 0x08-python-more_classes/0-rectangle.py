@@ -1,2 +1,4 @@
-#!/usr/bin/pyclass Rectangle:
-    pass
+#!/usr/bin/python3
+
+class Rectangle:
+    passs
