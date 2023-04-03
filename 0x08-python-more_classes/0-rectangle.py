@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 
-class Rectangle:
-    pass
+# This module defines a Rectangle class
 
-if __name__ == '__main__':
-    my_rectangle = Rectangle()
-    print(type(my_rectangle))
-    print(my_rectangle.__dict__)
+class Rectangle:
+    """Represents a rectangle."""
+    pass
