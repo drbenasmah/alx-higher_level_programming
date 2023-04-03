@@ -1,23 +1,32 @@
-#!/usr/bin/python3
-"""Defines a Rectangle class."""
+#!/usr/bin/env python3
 
+"""
+This module defines the Rectangle class.
+"""
 
 class Rectangle:
-    """Represent a rectangle."""
+    """
+    Represents a rectangle.
+
+    Attributes:
+        width (int): The width of the rectangle.
+        height (int): The height of the rectangle.
+    """
 
     def __init__(self, width=0, height=0):
-        """Initialize a new Rectangle.
+        """
+        Initializes a Rectangle object.
 
         Args:
-            width (int): The width of the new rectangle.
-            height (int): The height of the new rectangle.
+            width (int): The width of the rectangle.
+            height (int): The height of the rectangle.
         """
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Get/set the width of the Rectangle."""
+        """Gets or sets the width of the Rectangle."""
         return self.__width
 
     @width.setter
@@ -30,7 +39,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """Get/set the height of the Rectangle."""
+        """Gets or sets the height of the Rectangle."""
         return self.__height
 
     @height.setter
@@ -42,11 +51,16 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Return the area of the Rectangle."""
+        """Returns the area of the Rectangle."""
         return self.__width * self.__height
 
     def perimeter(self):
-        """Return the perimeter of the Rectangle."""
+        """Returns the perimeter of the Rectangle."""
+        return (self.__width + self.__height) * 2
+
+    def __str__(self):
+        """Returns a string representation of the Rectangle."""
         if self.__width == 0 or self.__height == 0:
-            return 0
-        return 2 * (self.__width + self.__height)
+            return ''
+        else:
+            return '\n'.join(['#' * self.__width] * self.__height)

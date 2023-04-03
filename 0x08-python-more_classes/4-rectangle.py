@@ -7,7 +7,6 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle.
-
         Args:
             width (int): The width of the new rectangle.
             height (int): The height of the new rectangle.
@@ -43,54 +42,28 @@ class Rectangle:
 
     def area(self):
         """Return the area of the Rectangle."""
-        return self.__width * self.__height
+        return (self.__width * self.__height)
 
     def perimeter(self):
         """Return the perimeter of the Rectangle."""
         if self.__width == 0 or self.__height == 0:
-            return 0
-        return (self.__width + self.__height) * 2
-
-    def diagonal(self):
-        """Return the diagonal of the Rectangle."""
-        return (self.__width ** 2 + self.__height ** 2) ** 0.5
+            return (0)
+        return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-        """Return the printable representation of the Rectangle."""
+        """Return the printable representation of the Rectangle.
+        Represents the rectangle with the # character.
+        """
         if self.__width == 0 or self.__height == 0:
-            return ""
+            return ("")
 
         rect = []
         for i in range(self.__height):
             [rect.append('#') for j in range(self.__width)]
             if i != self.__height - 1:
                 rect.append("\n")
-        return "".join(rect)
+        return ("".join(rect))
 
     def __repr__(self):
         """Return the string representation of the Rectangle."""
-        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
-
-    def __eq__(self, other):
-        """Check if two Rectangles are equal."""
-        return self.__width == other.width and self.__height == other.height
-
-    def __lt__(self, other):
-        """Check if a Rectangle is smaller than another Rectangle."""
-        return self.area() < other.area()
-
-    def __le__(self, other):
-        """Check if a Rectangle is smaller than or equal to another Rectangle."""
-        return self.area() <= other.area()
-
-    def __gt__(self, other):
-        """Check if a Rectangle is greater than another Rectangle."""
-        return self.area() > other.area()
-
-    def __ge__(self, other):
-        """Check if a Rectangle is greater than or equal to another Rectangle."""
-        return self.area() >= other.area()
-
-    def __ne__(self, other):
-        """Check if two Rectangles are not equal."""
-        return not self == other
+        return f"Rectangle({self.__width}, {self.__height})"
