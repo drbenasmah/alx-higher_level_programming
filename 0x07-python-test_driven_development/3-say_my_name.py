@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-"""
-This script defines a function for printing a name.
-"""
 
 def say_my_name(first_name, last_name=""):
     """
