@@ -3,12 +3,13 @@
 This script defines a function for integer addition.
 """
 
+
 def add_integer(a, b=98):
     """
     This function returns the integer addition of a and b.
 
     If either a or b is a non-integer and non-float, TypeError is raised.
-    Float arguments are typecasted to integers before the addition is performed.
+    Float arguments are typecasted.
     """
 
     # Check if a is not an integer or a float
@@ -21,4 +22,3 @@ def add_integer(a, b=98):
 
     # Cast a and b to integers and return their sum
     return int(a) + int(b)
-
