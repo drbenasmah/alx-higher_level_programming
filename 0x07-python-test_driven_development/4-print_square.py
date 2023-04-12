@@ -3,6 +3,7 @@
 This script defines a function for printing a square using the # character.
 """
 
+
 def print_square(size):
     """
     Print a square with the # character.
@@ -25,4 +26,3 @@ def print_square(size):
     for i in range(size):
         [print("#", end="") for j in range(size)]
         print("")
-
