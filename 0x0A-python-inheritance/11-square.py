@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-"""Defines a Rectangle subclass Square."""
-from 9_rectangle import Rectangle
+"""
+Defines a Square subclass of Rectangle.
+"""
+
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """Represent a square."""
+    """Represents a square."""
 
     def __init__(self, size):
         """Initialize a new square.
