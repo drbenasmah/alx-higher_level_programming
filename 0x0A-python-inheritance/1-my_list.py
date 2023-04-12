@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-Contains the MyList class.
+Defines a subclass or child list class MyList.
 """
 
 
 class MyList(list):
-    """Implements sorted printing for the built-in list class."""
+    """This class is a subclass of the built-in list class."""
 
     def print_sorted(self):
-        """Print a list in sorted ascending order."""
+        """Print a sorted list in a specific pattern."""
         print(sorted(self))
