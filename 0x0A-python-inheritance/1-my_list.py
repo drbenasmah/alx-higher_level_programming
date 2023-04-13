@@ -5,8 +5,8 @@
 
 
 class MyList(list):
-    """These class is a subclass of the list class."""
+    """This class is a subclass of the built-in list class."""
 
     def print_sorted(self):
-        """Print a sorted list in a specific pattern."""
+        """This prints a sorted list in an ascending order."""
         print(sorted(self))
