@@ -1,13 +1,15 @@
 #!/usr/bin/python3
-"""
-contains the MyList class
-"""
 
+class MyList:
+    def __init__(self):
+        self.list = []
 
-class MyList(list):
-    """Implements sorted printing for the built-in list class."""
+    def append(self, value):
+        self.list.append(value)
 
     def print_sorted(self):
-        """Print a list in sorted ascending order."""
-        print(sorted(self))
+        self.list.sort()
+        print(self.list)
 
+    def __str__(self):
+        return str(self.list)
